@@ -56,3 +56,8 @@ export default function App() {
 
   );
 }
+
+
+
+// sessionStorage.removeItem("visited");
+// location.reload();

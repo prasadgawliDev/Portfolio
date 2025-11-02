@@ -3,18 +3,27 @@ import "./loader.css";
 
 export default function Preloader() {
 //   const [show, setShow] = useState(() => !sessionStorage.getItem("visited"));
-const devMode = import.meta.env.DEV;
-const [show, setShow] = useState(() => devMode || !sessionStorage.getItem("visited"));
+// const devMode = import.meta.env.DEV;
+// const [show, setShow] = useState(() => devMode || !sessionStorage.getItem("visited"));
 
-  useEffect(() => {
-    if (!sessionStorage.getItem("visited")) {
-      sessionStorage.setItem("visited", "true");
-      const t = setTimeout(() => setShow(false), 2800);
-      return () => clearTimeout(t);
-    }
-  }, []);
+//   useEffect(() => {
+//     if (!sessionStorage.getItem("visited")) {
+//       sessionStorage.setItem("visited", "true");
+//       const t = setTimeout(() => setShow(false), 2800);
+//       return () => clearTimeout(t);
+//     }
+//   }, []);
 
-  if (!show) return null;
+//   if (!show) return null;
+
+
+const [show, setShow] = useState(true);
+
+useEffect(() => {
+  const t = setTimeout(() => setShow(false), 2800);
+  return () => clearTimeout(t);
+}, []);
+
 
   return (
     // <div className="preloader-wrapper">
