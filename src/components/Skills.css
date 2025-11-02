@@ -1,0 +1,130 @@
+
+
+.skills-section {
+    
+/* margin: clamp(6rem, 8vw, 12rem) 0; */
+/* height: 100vh;
+  width: 100%;
+  padding: 100px 0px;
+  color: #fff;
+  text-align: center;
+   /* background: black; */
+  /* margin: 135px auto; */ 
+
+
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  width: 100%;
+  color: #fff;
+  padding: 6rem auto ;
+  
+}
+
+
+
+
+.section-title {
+ 
+
+margin-top: 10rem;
+   font-size: 2rem;
+  font-weight: 700;
+  
+  letter-spacing: 2px;
+   margin-bottom: 4rem;
+
+
+   background: linear-gradient(90deg, #06b6d4, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.skills-container {
+display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 100px;
+  justify-items: center;
+  align-items: center;
+  width: 75%;
+  
+  
+  margin: 0 auto;
+  margin-top: 0rem auto;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 110px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.skill-icon {
+  width: 65%;
+  height: 80%;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+ 
+  text-transform: uppercase;
+  letter-spacing: 2px; 
+
+  
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .skills-container {
+    gap: 20px;
+    display: grid;
+    /* margin-top: 5rem; */
+    
+  }
+
+ .skills-section {
+      
+      padding: 0 auto;
+    }
+    
+    .section-title{
+      margin-top: 1rem;
+    }
+
+  .skill-card {
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+  }
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-name{
+    margin-top: 5px;
+  }
+}

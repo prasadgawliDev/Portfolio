@@ -1,0 +1,101 @@
+.experience {
+  margin-top: 8rem;
+  padding: 8rem 0;
+}
+
+.exp-container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+  margin-top: 2.5rem;
+}
+
+.exp-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 6rem;
+  color: #fcfcfc;            /* matches other sections */
+  text-align: center;
+}
+
+
+.exp-title span {
+background: linear-gradient(90deg, #06b6d4, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+/* vertical stack of glass cards */
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.exp-card {
+  background: rgba(255, 255, 255, 0.04);  /* glass vibe */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+}
+
+/* header: role left, dates right */
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .75rem;
+  margin: 0 0 .4rem;
+}
+
+.exp-role {
+  margin: 0;                 /* important: kill default h4 margins */
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.exp-dates {
+  color: #a8b0c6;
+  font-size: .95rem;
+}
+
+/* company */
+.exp-company {
+  font-weight: 700;
+  color: #e9eefb;
+  margin: 0 0 .6rem;
+}
+
+/* bullets */
+.exp-bullets {
+  margin: .25rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.exp-bullets li {
+  margin: .35rem 0;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+/* responsive tune */
+@media (max-width: 768px) {
+  .exp-card { padding: 1.25rem 1.2rem; }
+  .exp-title { font-size: 1.75rem; margin-bottom: 4rem;}
+  .exp-role { font-size: 1.1rem; }
+
+
+  .experience{
+
+padding: 0.4rem;
+}
+  .exp-bullets li {
+  margin: .15rem 0;
+  line-height: 1.45;
+  
+}
+}

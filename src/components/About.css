@@ -1,0 +1,95 @@
+.about-section {
+  display: grid;
+  place-items: center; /* Centers both vertically & horizontally */
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  color: #fff;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  text-align: left;
+}
+
+.about-image-wrapper {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  margin-top: 2rem;
+  width: 18vw;
+  height: 36vh;
+  border-radius: 49%;
+  object-fit: cover;
+  filter: blur(15px);
+  transition: filter 0.6s ease, transform 0.6s ease;
+  box-shadow: 0 0 20px rgba(9, 130, 146, 0.4);
+}
+
+.about-image.loaded {
+  filter: blur(0);
+  transform: scale(1.02);
+}
+
+.about-content {
+  flex: 2;
+  min-width: 38%;
+  
+}
+
+.about-title {
+  font-size: 2rem;
+  color: #06b6d4;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.about-text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1rem;
+  width: 40vw;
+  
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+.about-text{
+   font-size: 1.2rem;
+  width: 80vw;
+}
+  .about-section{
+    margin-top: 7rem;
+    margin-bottom: 8rem;
+    
+  }
+  .about-content {
+    max-width: 90%;
+  }
+
+  .about-image {
+    width: 180px;
+    height: 180px;
+    margin-top: 7rem;
+  }
+
+  .about-title {
+    text-align: center;
+  }
+
+  
+}

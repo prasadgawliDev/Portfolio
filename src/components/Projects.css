@@ -1,0 +1,240 @@
+.projects-section {
+  
+  color: #fff;
+  padding: 6rem 1.5rem;
+  text-align: center;
+  margin-bottom: 0;
+  
+
+}
+
+
+
+
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(6, 182, 212, 0.1);
+  color: #06b6d4;
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 25px;
+  text-decoration: none;
+  
+  
+}
+
+.github-link:hover {
+  background: #06b6d4;
+  color: #0f172a;
+  transform: translateY(-2px);
+ 
+}
+
+
+.live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(34, 197, 94, 0.1); /* greenish tint */
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+   margin-left: 25px;
+   text-decoration: none;
+   
+  
+}
+
+.live-link:hover {
+  background: #22c55e;
+  color: #0f172a;
+  transform: translateY(-2px);
+}
+
+
+.projects-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  
+}
+.projects-title p{
+text-align: center;
+  max-width: 42rem;        /* max-w-2xl = 672px */
+  margin-left: auto;       /* mx-auto */
+  margin-right: auto;
+  margin-top: 1.25rem;     /* mt-5 = 20px */
+  margin-bottom: 3rem;     /* mb-12 = 48px */
+  font-family: 'Ovo', serif;
+  font-size: larger;
+  
+}
+
+
+.projects-title span {
+background: linear-gradient(90deg, #06b6d4, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  /* display: flex; */
+  max-width: 80vw;
+  gap: 4rem;
+ 
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  background: #111827;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+ text-decoration: none;
+ align-items: baseline; 
+}
+
+/* .project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  border-radius: 10px 10px 0 0;
+  
+  
+} */
+
+
+/* skeleton shimmer overlay ON image only */
+.project-card img {
+  position: relative;
+  opacity: 0; /* start hidden */
+  animation: imgReveal .4s ease 2s forwards; /* fade in after 1s */
+
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  /* transition: all 0.3s ease; */
+  transition: opacity 1s ease-in-out;
+  border-radius: 10px 10px 0 0;
+}
+
+.project-card.show-shimmer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 38vh;   /* ✅ match your image height area (adjust if needed) */
+  background: linear-gradient(90deg, #d6d6d6 0%, #f3f3f3 50%, #d6d6d6 100%);
+  
+  /* background: linear-gradient(135deg, #171f38 0%, #051854 50%, #0b132b 100%); */
+  background-size: 180% 100%;
+  animation: shimmer 1s linear infinite, hideSkeleton .7s ease 2s forwards;
+  border-radius: 10px 10px 0 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* image fade-in after 2s */
+.project-card.show-shimmer img {
+  opacity: 0;
+  animation: imgReveal .4s ease 1s forwards;
+}
+
+/* keyframes */
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes hideSkeleton {
+  to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes imgReveal {
+  to { opacity: 1; }
+}
+
+.project-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 0.35rem;
+}
+
+.project-card:hover img {
+  opacity: 1;
+  
+}
+
+.project-info {
+  padding: 0.8rem;
+  text-align: left;
+  min-height: 3.9rem;
+  
+}
+
+.project-info h3 {
+  margin: 0.3rem auto;
+  font-size: 1.1rem;
+  color: #f9fafb;
+  letter-spacing: 1px;
+  
+}
+
+.project-info span {
+  
+  color: #afb0b2;
+  
+  font-weight: 480;
+  font-size: 0.9rem;
+  letter-spacing: 0.9px;
+  
+}
+
+@media(max-width: 768px){
+
+
+  .project-card.show-shimmer::before{
+    height: 50%;
+  }
+
+  .project-info{
+
+min-height:0.8rem ;
+  }
+
+
+  .projects-grid{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects-section{
+margin-top: 18rem;
+  }
+
+  .project-info{
+    padding: 0.5rem;
+  }
+}
