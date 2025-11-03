@@ -26,11 +26,7 @@ useEffect(() => {
 
 
   return (
-    // <div className="preloader-wrapper">
-    //   <div className="liquid-blob"></div>
-    //   <div className="loading-text">Loading...</div>
-    // </div>
-
+   
 
   <div className="preloader-wrapper">
   <div className="cube">

@@ -24,7 +24,7 @@ const About = () => {
         {/* Left Side - Image */}
         <div className="about-image-wrapper">
           <motion.img
-            src="/Prasad.png" // replace with your image path
+            src="/Prasad.png"
             alt="Prasad"
             className={`about-image ${isLoaded ? "loaded" : "loading"}`}
             onLoad={() => setIsLoaded(true)}

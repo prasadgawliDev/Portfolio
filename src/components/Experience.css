@@ -12,8 +12,8 @@
 .exp-title {
   font-size: 2rem;
   font-weight: 700;
-  margin: 0 0 6rem;
-  color: #fcfcfc;            /* matches other sections */
+  margin: 0 0 4rem;
+  color: #fcfcfc;            
   text-align: center;
 }
 
@@ -52,7 +52,7 @@ background: linear-gradient(90deg, #06b6d4, #7c3aed);
 }
 
 .exp-role {
-  margin: 0;                 /* important: kill default h4 margins */
+  margin: 0;                 
   font-size: 1.15rem;
   font-weight: 700;
   color: #fff;
@@ -85,13 +85,13 @@ background: linear-gradient(90deg, #06b6d4, #7c3aed);
 /* responsive tune */
 @media (max-width: 768px) {
   .exp-card { padding: 1.25rem 1.2rem; }
-  .exp-title { font-size: 1.75rem; margin-bottom: 4rem;}
+  .exp-title { font-size: 1.75rem; margin-bottom: 2rem;margin-top: 5rem;}
   .exp-role { font-size: 1.1rem; }
 
 
   .experience{
-
-padding: 0.4rem;
+margin-top: 5rem;
+padding: 0.6rem;
 }
   .exp-bullets li {
   margin: .15rem 0;
