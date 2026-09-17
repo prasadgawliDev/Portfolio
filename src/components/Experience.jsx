@@ -6,12 +6,13 @@ export default function Experience() {
   const items = [
     {
       role: "Software Engineer",
-      dates: "Dec 2024 - Present",
+      dates: "June 2025 - Present",
       company: "Company : TRRev",
       bullets: [
         "Designed a responsive website for a training institute using ReactJS, emphasizing usercentric design and ensuring seamless accessibility across mobile devices.",
-        "Developed secure user authentication using JWT & bcrypt in Node.js/Express, reducing unauthorized access incidents by 100% and strengthening application security.",
+        "Enhanced frontend efficiency in React by using useMemo/useCallback and API caching strategies,reducing unnecessary re-renders and optimizing data fetching performance.",
         "Implemented reusable custom React hooks to standardize API fetching, error handling, and local state management resulting in a 40% reduction in repetitive component logic and significantly improved maintainability.",
+        "Resolved 20+ critical bugs and functionality issues, improving application stability and enhancing overall user experience.",
         "Mentored 2 junior developers, enhancing team productivity and accelerating feature delivery."
       ]
     },
